@@ -49,3 +49,13 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 end
+
+def sign_in_user
+  user = User.new(email: 'cheese_lover@cheese.example.com', password: 'cheese,duh!')
+  user.save!
+  visit root_path
+  click_link 'Sign in'
+  fill_in :email, with: 'cheese_lover@cheese.example.com'
+  fill_in :password, with: 'cheese,duh!'
+  click_button 'Sign in'
+end
