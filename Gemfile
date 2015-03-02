@@ -46,3 +46,5 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
 end
+
+gem 'student_challenges_formatter', git: "git@github.com:gSchool/student-challenges-formatter-gem.git", branch: "rails-formatter"

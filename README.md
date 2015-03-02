@@ -2,6 +2,8 @@
 
 ## Setup
 
+Go to your profile on students.gschool.it (click your name, My Profile), click on the "Download Exercise File" under Exercises. Move that file to your root directory under the name `.gschool.json`. If you downloaded the file to your Downloads directory, this should do it: `mv ~/Downloads/gschool.json ~/.gschool.json`
+
 Normal setup: Fork and clone this repository, `rake db:create`, etc.
 
 ## Steps
