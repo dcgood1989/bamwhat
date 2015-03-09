@@ -1,0 +1,18 @@
+- if current_user
+  = link_to "Sign out", sign_out_path
+  %h2 List of Cheeses
+- else
+  = link_to "Sign me in Nobody is logged in", sign_in_path
+  = link_to "Sign up", sign_up_path
+  = link_to "Sign in", sign_in_path
+
+
+- if current_user
+  - @cheeses.each do |cheese|
+    = link_to "#{cheese.name} - $#{cheese.price_per_lb}", cheese_path(cheese)
+    = link_to "Edit Cheese", edit_cheese_path(cheese)
+- else
+  Welcome, please click the sign up or sign in links below
+
+
+= link_to "New Cheese", new_cheese_path

@@ -1,0 +1,9 @@
+= form_for @cheese do |f|
+
+  = f.label :name
+  = f.text_field :name
+
+  = f.label :price_per_lb
+  = f.text_field :price_per_lb
+
+  = f.submit "Update Cheese"
